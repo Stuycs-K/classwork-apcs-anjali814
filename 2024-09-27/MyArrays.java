@@ -37,6 +37,13 @@ public static void main (String [] args){
 int[] testArray1 = {1, 2, 3, 4, 5};
   System.out.println("Test Case 1: " + arrayToString(testArray1)); // Expected: [1, 2, 3, 4, 5]
 
+int[] testArray1 = {};
+  System.out.println("Test Case 1: " + arrayToString(testArray1)); // Expected: []
+
+int[] testArray1 = {139};
+  System.out.println("Test Case 1: " + arrayToString(testArray1)); // Expected: [139]
+
+
 // test for copy; passed
 int [] original = {1, 2, 3, 4};
 int [] copy = returnCopy(original);
@@ -44,10 +51,38 @@ System.out.println ("Original: " + arrayToString (original)); // Expected: [1, 2
 System.out.println("Copy: " + arrayToString(copy)); // Expected: [1, 2, 3, 4]
 System.out.println("Arrays are equal: " + arrayToString(original).equals(arrayToString(copy))); // Expected: true
 
-// test for concat;
+int [] original = {23, 374, 1};
+int [] copy = returnCopy(original);
+System.out.println ("Original: " + arrayToString (original)); // Expected: [23, 374, 1]
+System.out.println("Copy: " + arrayToString(copy)); // Expected: [23, 374, 1]
+System.out.println("Arrays are equal: " + arrayToString(original).equals(arrayToString(copy))); // Expected: true
+
+int [] original = {};
+int [] copy = returnCopy(original);
+System.out.println ("Original: " + arrayToString (original)); // Expected: []
+System.out.println("Copy: " + arrayToString(copy)); // Expected: []
+System.out.println("Arrays are equal: " + arrayToString(original).equals(arrayToString(copy))); // Expected: true
+
+
+// test for concat; passed
 int [] array1 = {1, 2, 3, 4};
 int [] array2 = {5, 6, 7, 8};
 int[] concatenated = concatArray(array1, array2);
 System.out.println("Concatenated: " + arrayToString(concatenated)); // Expected: [1, 2, 3, 4, 5, 6, 7, 8]
+
+int [] array1 = {1, 12, 237};
+int [] array2 = {5, 60, 7, 91238};
+int[] concatenated = concatArray(array1, array2);
+System.out.println("Concatenated: " + arrayToString(concatenated)); // Expected: [1, 12, 237, 5, 60, 7, 91238]
+
+int [] array1 = {1, 1287};
+int [] array2 = {};
+int[] concatenated = concatArray(array1, array2);
+System.out.println("Concatenated: " + arrayToString(concatenated)); // Expected: [1, 1287]
+
+int [] array1 = {1};
+int [] array2 = {239023, 12};
+int[] concatenated = concatArray(array1, array2);
+System.out.println("Concatenated: " + arrayToString(concatenated)); // Expected: [1, 239023, 12]
 }
 }
