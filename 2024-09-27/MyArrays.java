@@ -24,6 +24,9 @@ public static int[] concatArray(int[]ary1,int[]ary2) {
   for (int i = 0; i < ary1.length; i++) {
     result[i] = ary1[i];
   }
+  for (int i = 0; i < ary2.length; i++) {
+    result[i] = ary2[i];
+  }
   return result;
 }
 
