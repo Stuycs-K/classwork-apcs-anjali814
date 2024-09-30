@@ -25,7 +25,7 @@ public static int[] concatArray(int[]ary1,int[]ary2) {
     result[i] = ary1[i];
   }
   for (int i = 0; i < ary2.length; i++) {
-    result[i] = ary2[i];
+    result[ary1.length + i] = ary2[i];
   }
   return result;
 }
