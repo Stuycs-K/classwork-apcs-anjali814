@@ -22,26 +22,15 @@ public static int[] returnCopy(int[] ary) {
 
 
 
-
-
-
-
-public static void main (String [] args)
+public static void main (String [] args){
 // test for array to string; passed
-{int[] testArray1 = {1, 2, 3, 4, 5};
+int[] testArray1 = {1, 2, 3, 4, 5};
   System.out.println("Test Case 1: " + arrayToString(testArray1)); // Expected: [1, 2, 3, 4, 5]
 
 
-
-
-
-
-
-
-
-//int [] original = {1 ,2 ,3, 4}
-//int [] copy = returnCopy(original);
-
-//System.out.println ("original" + arrayToString (original));
-}
+int [] original = {1 ,2 ,3, 4};
+int [] copy = returnCopy(original);
+System.out.println ("original" + arrayToString (original)); // Expected: [1, 2, 3, 4]
+System.out.println("Copy: " + arrayToString(copy)); // Expected: [1, 2, 3, 4]
+System.out.println("Arrays are equal: " + arrayToString(original).equals(arrayToString(copy))); // Expected: true
 }
