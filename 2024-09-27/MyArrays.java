@@ -34,3 +34,4 @@ System.out.println ("original" + arrayToString (original)); // Expected: [1, 2, 
 System.out.println("Copy: " + arrayToString(copy)); // Expected: [1, 2, 3, 4]
 System.out.println("Arrays are equal: " + arrayToString(original).equals(arrayToString(copy))); // Expected: true
 }
+}
