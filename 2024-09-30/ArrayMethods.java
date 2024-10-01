@@ -38,7 +38,7 @@ public static int arr2DSum(int[][]nums){
       sum = sum + nums [i] [j];
     }
   }
-  return null;//place holder return value so it compiles.
+  return sum;//place holder return value so it compiles.
 }
 
 public static int[][] swapRC(int[][]nums){
