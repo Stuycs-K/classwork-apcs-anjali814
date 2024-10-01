@@ -31,6 +31,23 @@ public static String arrToString(int[][]ary){
   return combined;
 }
 
+public static int arr2DSum(int[][]nums){
+  int sum = 0;
+  for (int i = 0; i < nums.length; i++) {
+    for (int j = 0; j < nums[i].length; j++) {
+      sum = sum + nums [i];
+    }
+  }
+  return null;//place holder return value so it compiles.
+}
+
+public static int[][] swapRC(int[][]nums){
+  return new int[1][1];
+}
+
+
+
+
 public static void main(String[] args){
   int[][] arr = {
     {2,3,4},
@@ -39,7 +56,13 @@ public static void main(String[] args){
   };
   System.out.println(arrToString(arr)); // expected: "[[2, 3, 4], [5, 6, 7], [8, 0, 4]"
 
-    }
+  int[][] nums = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+  };
+  System.out.println("Sum of 2D array: " + arr2DSum(nums)); // expected: 45
+}
 
 
 }
