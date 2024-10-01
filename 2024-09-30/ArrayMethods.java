@@ -53,15 +53,27 @@ public static int[][] swapRC(int[][]nums){
 
 
 
-
 public static void main(String[] args){
+// test case for 2d array; passed
   int[][] arr = {
     {2,3,4},
     {5,6,7},
     {8,0,4}
   };
-  System.out.println(arrToString(arr)); // expected: "[[2, 3, 4], [5, 6, 7], [8, 0, 4]"
+  System.out.println(arrToString(arr)); // expected: [[2, 3, 4], [5, 6, 7], [8, 0, 4]
 
+  int[][] arr2 = {};
+  System.out.println(arrToString(arr3)); // expected: [
+
+  int[][] arr3 = {
+    {1, 2},
+    {3, 4},
+    {5, 6}
+  };
+  System.out.println(arrToString(arr4)); // expected: [[1, 2], [3, 4], [5, 6]]
+
+
+// test case for 2d sum; passed
   int[][] nums = {
     {1, 2, 3},
     {4, 5, 6},
@@ -69,11 +81,37 @@ public static void main(String[] args){
   };
   System.out.println("Sum of 2D array: " + arr2DSum(nums)); // expected: 45
 
+  int[][] nums2 = {
+    {0, 0},
+    {0, 0}
+  };
+  System.out.println("Sum of 2D array: " + arr2DSum(nums2)); // expected: 0
+
+  int[][] nums3 = {
+    {10, 20},
+    {30, 40},
+    {50, 60}
+  };
+  System.out.println("Sum of 2D array: " + arr2DSum(nums3)); // expected: 210
+
+
+// test case for array swap; passed
   int[][] array1 = {
     {1, 2, 3},
     {4, 5, 6}
   };
   System.out.println("Swap array: " + arrToString(swapRC(array1)));; // expected : [[1,4],[2,5],[3,6]]
 
+  int[][] array2 = {
+    {1, 2},
+    {3, 4},
+    {5, 6}
+  };
+  System.out.println("Swapped array: " + arrToString(swapRC(array2))); // expected: [[1, 3, 5], [2, 4, 6]]
+
+  int[][] array3 = {
+    {1}
+  }
+  System.out.println("Swapped array: " + arrToString(swapRC(array3))); // expected: [[1]]
 }
 }
