@@ -63,14 +63,14 @@ public static void main(String[] args){
   System.out.println(arrToString(arr)); // expected: [[2, 3, 4], [5, 6, 7], [8, 0, 4]
 
   int[][] arr2 = {};
-  System.out.println(arrToString(arr3)); // expected: [
+  System.out.println(arrToString(arr2)); // expected: []
 
   int[][] arr3 = {
     {1, 2},
     {3, 4},
     {5, 6}
   };
-  System.out.println(arrToString(arr4)); // expected: [[1, 2], [3, 4], [5, 6]]
+  System.out.println(arrToString(arr3)); // expected: [[1, 2], [3, 4], [5, 6]]
 
 
 // test case for 2d sum; passed
