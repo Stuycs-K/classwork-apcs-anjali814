@@ -22,13 +22,12 @@ public static String arrToString(int[][]ary){
   if (ary.length == 0) return "[]";
   String combined = "[";
   for (int i = 0; i < ary.length; i++){
-    if (i == ary.length - 1){
-      combined += arrToString(ary[i]);
-    }else{
-      combined += arrToString(ary[i] + "}, {}");
+    combined += arrayToString(ary[i]);
+    if (i < ary.length - 1) {
+      combined += ", ";
     }
   }
-  combined += "}}";
+  combined += "]";
   return combined;
 }
 
