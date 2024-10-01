@@ -35,10 +35,10 @@ public static int arr2DSum(int[][]nums){
   int sum = 0;
   for (int i = 0; i < nums.length; i++) {
     for (int j = 0; j < nums[i].length; j++) {
-      sum = sum + nums [i] [j];
+      sum = sum + nums [i][j];
     }
   }
-  return sum;//place holder return value so it compiles.
+  return sum;
 }
 
 public static int[][] swapRC(int[][]nums){
@@ -62,7 +62,11 @@ public static void main(String[] args){
     {7, 8, 9}
   };
   System.out.println("Sum of 2D array: " + arr2DSum(nums)); // expected: 45
-}
 
+  int[][] array1 = {
+    {1, 2, 3},
+    {4, 5, 6}
+    };
+    System.out.println("Swap array: " + swapRC(nums));; // expected : [[1,4],[2,5],[3,6]]
 
 }
