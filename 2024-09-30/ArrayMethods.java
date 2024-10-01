@@ -1,4 +1,4 @@
-// I think my partner forgot to email me the file from class becuase it's not in my inbox
+// I think my partner forgot to email me the file from class because it's not in my inbox
 // I don't have his email because I wrote my email on the file...
 
 public class ArrayMethods {
