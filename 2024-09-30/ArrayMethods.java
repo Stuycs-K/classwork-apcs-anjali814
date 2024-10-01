@@ -71,3 +71,4 @@ public static void main(String[] args){
   System.out.println("Swap array: " + swapRC(nums));; // expected : [[1,4],[2,5],[3,6]]
 
 }
+}
