@@ -111,7 +111,7 @@ public static void main(String[] args){
 
   int[][] array3 = {
     {1}
-  }
+  };
   System.out.println("Swapped array: " + arrToString(swapRC(array3))); // expected: [[1]]
 }
 }
