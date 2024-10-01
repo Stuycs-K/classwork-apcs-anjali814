@@ -35,7 +35,7 @@ public static int arr2DSum(int[][]nums){
   int sum = 0;
   for (int i = 0; i < nums.length; i++) {
     for (int j = 0; j < nums[i].length; j++) {
-      sum = sum + nums [i];
+      sum = sum + nums [i] [j];
     }
   }
   return null;//place holder return value so it compiles.
