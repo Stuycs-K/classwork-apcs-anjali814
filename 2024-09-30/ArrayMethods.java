@@ -193,7 +193,7 @@ public static void main(String[] args){
   int[][] copiedAry2 = copy(ary2);
   System.out.println("Original array: " + arrToString(ary2));  // Expected: []
   System.out.println("Copied array: " + arrToString(copiedAry2));   // Expected: []
-  ary[0][0] = 100;
+  ary2[0][0] = 100;
   System.out.println("Original array: " + arrToString(ary2));  // Expected: [[100]]
   System.out.println("Copied array: " + arrToString(copiedAry2));   // Expected: []
 
@@ -203,7 +203,7 @@ public static void main(String[] args){
   int[][] copiedAry3 = copy(ary3);
   System.out.println("Original array: " + arrToString(ary3));  // Expected: [[1, 0, 3]]
   System.out.println("Copied array: " + arrToString(copiedAry3));   // Expected: [[1, 0, 3]]
-  ary[0][0] = -100;
+  ary3[0][0] = -100;
   System.out.println("Original array: " + arrToString(ary3));  // Expected: [[-100, 0, 3]]
   System.out.println("Copied array: " + arrToString(copiedAry3));   // Expected: [[1, 0, 3]]
 
@@ -215,7 +215,7 @@ public static void main(String[] args){
   int[][] copiedAry4 = copy(ary4);
   System.out.println("Original array: " + arrToString(ary4));  // Expected: [[1, 2, 3], [4, 500, 6], [7, 8, 9, -100]]
   System.out.println("Copied array: " + arrToString(copiedAry4));   // Expected: [[1, 2, 3], [4, 500, 6], [7, 8, 9, -100]]
-  ary[0][0] = 13;
+  ary4[0][0] = 13;
   System.out.println("Original array: " + arrToString(ary4));  // Expected: [[13, 2, 3], [4, 500, 6], [7, 8, 9, -100]]
   System.out.println("Copied array: " + arrToString(copiedAry4));   // Expected: [[1, 2, 3], [4, 500, 6], [7, 8, 9, -100]]
 }
