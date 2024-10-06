@@ -134,8 +134,16 @@ public static void main(String[] args){
   };
 
   replaceNegative(neg);
-  System.out.println("Replace negative array: " + arrToString(neg));
+  System.out.println("Replace negative array: " + arrToString(neg)); // expected: [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
 
+  int[][] neg2 = {
+    {5, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+  };
+
+replaceNegative(neg2);
+System.out.println("Replace negative array: " + arrToString(neg2)); // expected: [[5, 2, 3], [4, 5, 6], [7, 8, 9]] 
 
 }
 }
