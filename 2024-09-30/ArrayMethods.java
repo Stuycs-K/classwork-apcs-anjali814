@@ -73,7 +73,7 @@ public static int[][] copy(int[][] nums){
     for (int j = 0; j < nums[i].length; j++) {
       copied[i][j] = nums[i][j];
     }
-    return copy;
+    return copied;
   }
 }
 
@@ -184,7 +184,7 @@ public static void main(String[] args){
   int[][] copiedAry = copy(ary);
   System.out.println("Original array: " + arrToString(ary));  // Expected: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
   System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-  original[0][0] = 100;
+  ary[0][0] = 100;
   System.out.println("Original array: " + arrToString(ary));  // Expected: [[100, 2, 3], [4, 5, 6], [7, 8, 9]]
   System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 }
