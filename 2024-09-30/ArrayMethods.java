@@ -193,7 +193,7 @@ public static void main(String[] args){
   int[][] copiedAry2 = copy(ary2);
   System.out.println("Original array: " + arrToString(ary2));  // Expected: []
   System.out.println("Copied array: " + arrToString(copiedAry2));   // Expected: []
-  ary2[0][0] = 100;
+  ary2 = new int[][] {{100}};
   System.out.println("Original array: " + arrToString(ary2));  // Expected: [[100]]
   System.out.println("Copied array: " + arrToString(copiedAry2));   // Expected: []
 
