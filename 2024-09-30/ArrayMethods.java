@@ -73,8 +73,8 @@ public static int[][] copy(int[][] nums){
     for (int j = 0; j < nums[i].length; j++) {
       copied[i][j] = nums[i][j];
     }
-    return copied;
   }
+  return copied;
 }
 
 
