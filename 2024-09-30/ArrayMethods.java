@@ -54,7 +54,7 @@ public static int[][] swapRC(int[][]nums){
 public static void replaceNegative(int[][] vals){
   for (int i = 0; i < vals.length; i++) {    // row
     for (int c = 0; c < vals[i].length; c++) {    //column
-      if (vals[i][j] < 0) {
+      if (vals[i][c] < 0) {
         if (i == c) {
           vals[i][c] = 1;
         }
@@ -145,7 +145,7 @@ public static void main(String[] args){
   };
 
  replaceNegative(neg2);
- System.out.println("Replace negative array: " + arrToString(neg2)); // expected: [[5, 2, 3], [4, 5, 6], [7, 8, 9]] 
+ System.out.println("Replace negative array: " + arrToString(neg2)); // expected: [[5, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 }
 }
