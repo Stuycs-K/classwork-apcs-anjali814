@@ -22,7 +22,7 @@ public static String arrToString(int[][]ary){
   if (ary.length == 0) return "[]";
   String combined = "[";
   for (int i = 0; i < ary.length; i++){
-    combined += arrayToString(ary[i]);
+    combined += arrToString(ary[i]);
     if (i < ary.length - 1) {
       combined += ", ";
     }
@@ -54,7 +54,7 @@ public static int[][] swapRC(int[][]nums){
 public static void replaceNegative(int[][] vals){
   for (int i = 0; i < vals.length; i++) {    // row
     for (int c = 0; c < vals[i].length; c++) {    //column
-      if (i = c) {
+      if (i == c) {
         vals[i][c] = 1;
       }
       else {
