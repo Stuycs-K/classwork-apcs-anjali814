@@ -212,7 +212,7 @@ public static void main(String[] args){
     {4, 500, 6},
     {7, 8, 9, -100}
   };
-  int[][] copiedAry = copy(ary4);
+  copiedAry = copy(ary4);
   System.out.println("Original array: " + arrToString(ary4));  // Expected: [[1, 2, 3], [4, 500, 6], [7, 8, 9, -100]]
   System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 2, 3], [4, 500, 6], [7, 8, 9, -100]]
   ary[0][0] = 13;
