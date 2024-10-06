@@ -176,6 +176,7 @@ public static void main(String[] args){
   replaceNegative(neg4);
   System.out.println("Replace negative array: " + arrToString(neg4)); // expected: [[1, 0, 3, 4], [6, 1, 0, 9], [10, 11, 1, 0], [0, 14, 15, 1]]
 
+// test case for replace copy; passed
   int[][] ary = {
     {1, 2, 3},
     {4, 5, 6},
@@ -187,5 +188,35 @@ public static void main(String[] args){
   ary[0][0] = 100;
   System.out.println("Original array: " + arrToString(ary));  // Expected: [[100, 2, 3], [4, 5, 6], [7, 8, 9]]
   System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+  int[][] ary2 = {};
+  int[][] copiedAry = copy(ary2);
+  System.out.println("Original array: " + arrToString(ary2));  // Expected: []
+  System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: []
+  ary[0][0] = 100;
+  System.out.println("Original array: " + arrToString(ary2));  // Expected: [[100]]
+  System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: []
+
+  int[][] ary3 = {
+    {1, 0, 3},
+  };
+  int[][] copiedAry = copy(ary3);
+  System.out.println("Original array: " + arrToString(ary3));  // Expected: [[1, 0, 3]]
+  System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 0, 3]]
+  ary[0][0] = -100;
+  System.out.println("Original array: " + arrToString(ary3));  // Expected: [[-100, 0, 3]]
+  System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 0, 3]]
+
+  int[][] ary4 = {
+    {1, 2, 3},
+    {4, 500, 6},
+    {7, 8, 9, -100}
+  };
+  int[][] copiedAry = copy(ary4);
+  System.out.println("Original array: " + arrToString(ary4));  // Expected: [[1, 2, 3], [4, 500, 6], [7, 8, 9, -100]]
+  System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 2, 3], [4, 500, 6], [7, 8, 9, -100]]
+  ary[0][0] = 13;
+  System.out.println("Original array: " + arrToString(ary4));  // Expected: [[13, 2, 3], [4, 500, 6], [7, 8, 9, -100]]
+  System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 2, 3], [4, 500, 6], [7, 8, 9, -100]]
 }
 }
