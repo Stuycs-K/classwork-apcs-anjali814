@@ -190,7 +190,7 @@ public static void main(String[] args){
   System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
   int[][] ary2 = {};
-  int[][] copiedAry = copy(ary2);
+  copiedAry = copy(ary2);
   System.out.println("Original array: " + arrToString(ary2));  // Expected: []
   System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: []
   ary[0][0] = 100;
@@ -200,7 +200,7 @@ public static void main(String[] args){
   int[][] ary3 = {
     {1, 0, 3},
   };
-  int[][] copiedAry = copy(ary3);
+  copiedAry = copy(ary3);
   System.out.println("Original array: " + arrToString(ary3));  // Expected: [[1, 0, 3]]
   System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 0, 3]]
   ary[0][0] = -100;
