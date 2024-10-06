@@ -66,6 +66,10 @@ public static void replaceNegative(int[][] vals){
   }
 }
 
+public static int[][] copy(int[][] nums){
+  return null;//placeholder so it compiles
+}
+
 
 public static void main(String[] args){
 // test case for 2d array; passed
@@ -128,7 +132,7 @@ public static void main(String[] args){
   };
   System.out.println("Swapped array: " + arrToString(swapRC(array3))); // expected: [[1]]
 
-// test case for replace neg;
+// test case for replace neg; passed
   int[][] neg = {
     {-5, -2, -3},
     {-4, -1, -8},
@@ -147,5 +151,21 @@ public static void main(String[] args){
  replaceNegative(neg2);
  System.out.println("Replace negative array: " + arrToString(neg2)); // expected: [[5, 2, 3], [4, 5, 6], [7, 8, 9]]
 
+ int[][] neg3 = {
+    {-5, 2, 3},
+    {4, -1, 6},
+    {7, 8, -3}
+  };
+  replaceNegative(neg3);
+  System.out.println("Replace negative array: " + arrToString(neg3)); // expected: [[1, 2, 3], [4, 1, 6], [7, 8, 1]]
+
+  int[][] neg4 = {
+    {-5, -2, 3, 4},
+    {6, -1, -8, 9},
+    {10, 11, -3, -12},
+    {-13, 14, 15, -16}
+  };
+  replaceNegative(neg4);
+  System.out.println("Replace negative array: " + arrToString(neg4)); // expected: [[1, 0, 3, 4], [6, 1, 0, 9], [10, 11, 1, 0], [0, 14, 15, 1]]
 }
 }
