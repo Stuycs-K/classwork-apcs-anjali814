@@ -5,7 +5,7 @@
 //jabae50@stuy.edu
 
 public class ArrayMethods{
-  public static String arrayToString(int ary[]){
+  public static String arrToString(int ary[]){
     String combined = "[";
     for (int i = 0; i < ary.length; i++){
       if (i == ary.length - 1){
@@ -51,6 +51,18 @@ public static int[][] swapRC(int[][]nums){
   return result;
 }
 
+public static void replaceNegative(int[][] vals){
+  for (int i = 0; i < vals.length; i++) {    // row
+    for (int c = 0; c < vals[i].length; c++) {    //column
+      if (i = c) {
+        vals[i][c] = 1;
+      }
+      else {
+        vals[i][c] = 0;
+      }
+    }
+  }
+}
 
 
 public static void main(String[] args){
@@ -100,7 +112,7 @@ public static void main(String[] args){
     {1, 2, 3},
     {4, 5, 6}
   };
-  System.out.println("Swapped array: " + arrToString(swapRC(array1)));; // expected : [[1,4],[2,5],[3,6]]
+  System.out.println("Swapped array: " + arrToString(swapRC(array1)));; // expected : [[1,4], [2,5], [3,6]]
 
   int[][] array2 = {
     {1, 2},
@@ -113,5 +125,17 @@ public static void main(String[] args){
     {1}
   };
   System.out.println("Swapped array: " + arrToString(swapRC(array3))); // expected: [[1]]
+
+// test case for replace neg;
+  int[][] neg = {
+    {-5, -2, -3},
+    {-4, -1, -8},
+    {-9, -7, -3}
+  };
+
+  replaceNegative(neg);
+  System.out.println("Replace negative array: " + arrToString(neg));
+
+
 }
 }
