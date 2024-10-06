@@ -67,7 +67,15 @@ public static void replaceNegative(int[][] vals){
 }
 
 public static int[][] copy(int[][] nums){
-  return null;//placeholder so it compiles
+  int[][] copied = new int[nums.length][];
+  for (int i = 0; i < nums.length; i++) {
+    copied[i] = new int[nums[i].length];
+    for (int j = 0; j < nums[i].length; j++) {
+      copied[i][j] = nums[i][j];
+    }
+    return copy;
+   }
+ }
 }
 
 
@@ -167,5 +175,17 @@ public static void main(String[] args){
   };
   replaceNegative(neg4);
   System.out.println("Replace negative array: " + arrToString(neg4)); // expected: [[1, 0, 3, 4], [6, 1, 0, 9], [10, 11, 1, 0], [0, 14, 15, 1]]
+
+  int[][] ary = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+  };
+  int[][] copiedAry = copy(ary);
+  System.out.println("Original array: " + arrToString(ary));  // Expected: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+  System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+  original[0][0] = 100;
+  System.out.println("Original array: " + arrToString(ary));  // Expected: [[100, 2, 3], [4, 5, 6], [7, 8, 9]]
+  System.out.println("Copied array: " + arrToString(copiedAry));   // Expected: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 }
 }
