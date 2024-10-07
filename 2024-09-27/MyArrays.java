@@ -44,6 +44,7 @@ testArray1 = new int[] {139};
   System.out.println("Test Case 1: " + arrayToString(testArray1)); // Expected: [139]
 
 
+<<<<<<< HEAD
 // test for copy; passed
 int [] original = {1, 2, 3, 4};
 int [] copy = returnCopy(original);
@@ -84,5 +85,16 @@ array1 = new int[] {1};
 array2 = new int[] {239023, 12};
 concatenated = concatArray(array1, array2);
 System.out.println("Concatenated: " + arrayToString(concatenated)); // Expected: [1, 239023, 12]
+=======
+
+
+
+
+public static void main (String [] args)
+{int [] original = {1 ,2 ,3, 4}, int [] copy = returnCopy(original);
+
+System.out.println ("original" + arrayToString (original));
+
+>>>>>>> 2a8f89a (classwork)
 }
 }
