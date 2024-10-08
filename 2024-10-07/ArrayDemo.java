@@ -130,9 +130,9 @@ public class ArrayDemo {
       for (int j = 0; j < nums[i].length; j++) {
         result += "<td>" + nums[i][j] + "</td>";
       }
-      result += "<tr>"
+      result += "<tr>";
     }
-    result += "<table>"
+    result += "<table>";
     return result;
   }
 
