@@ -19,7 +19,7 @@ public class ArrayDemo {
       {1, 0, 3},
       {0, 5, 0, 0}
     };
-    System.out.println("Zeroes in array: " + (countZeros2D(array3)));; // expected : 0
+    System.out.println("Zeroes in array: " + (countZeros2D(array3)));; // expected : 4
 }
 
 
