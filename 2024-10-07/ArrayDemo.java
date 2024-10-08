@@ -128,9 +128,11 @@ public class ArrayDemo {
     for (int i = 0; i < nums.length; i++) {
       result += "<tr>";
       for (int j = 0; j < nums[i].length; j++) {
-        result += "<td>" + nums[i][j] + "</td>";;
+        result += "<td>" + nums[i][j] + "</td>";
       }
+      result += "<tr>"
     }
+    result += "<table>"
     return result;
   }
 
