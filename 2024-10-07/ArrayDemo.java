@@ -2,10 +2,6 @@
 import java.util.Arrays;
 public class ArrayDemo {
   public static void main(String[]args){
-    //write your tests here!
-    //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
-    //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
-    //do not use any other Arrays.method()
 
     // test cases for count zeroes; passed
     int[][] array = {
@@ -23,7 +19,7 @@ public class ArrayDemo {
     };
     System.out.println("Zeroes in array: " + (countZeros2D(array3)));; // expected : 4
 
-    // test cases for html;
+    // test cases for html; passed
     int[][] ary = {
       {1, 2},
       {3}
@@ -31,7 +27,7 @@ public class ArrayDemo {
     System.out.println(htmlTable(ary)); // expected output: "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
 
     int[][] ary2 = {};
-    System.out.println(htmlTable(ary2)); // expected output:
+    System.out.println(htmlTable(ary2)); // expected output: "<table><table>"
 
     int[][] ary3 = {
       {1, 2},
@@ -126,13 +122,6 @@ public class ArrayDemo {
     return result;
   }
 
-//6. Make an HTML table by putting a table tag around the entire 2d array,
-  //   tr tags around each row, and td tags around each value.
-  //   You may use a helper method
-  //   Note there is no whitespace in the string, it all one line with no spaces/tabs.
-  //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
-  // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
-
   public static String htmlTable(int[][]nums){
     String result = "<table>";
     for (int i = 0; i < nums.length; i++) {
@@ -140,9 +129,9 @@ public class ArrayDemo {
       for (int j = 0; j < nums[i].length; j++) {
         result += "<td>" + nums[i][j] + "</td>";
       }
-      result += "<tr>";
+      result += "</tr>";
     }
-    result += "<table>";
+    result += "</table>";
     return result;
   }
 
