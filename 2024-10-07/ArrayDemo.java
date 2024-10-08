@@ -25,12 +25,11 @@ public class ArrayDemo {
 
     // test cases for html;
     int[][] ary = {
-            {1, 2},
-            {3}
-        };
-        System.out.println(htmlTable(ary)); // expected output: "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
-    }
-}
+      {1, 2},
+      {3}
+    };
+    System.out.println(htmlTable(ary)); // expected output: "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
+  }
 
 
 
