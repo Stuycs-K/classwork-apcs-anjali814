@@ -34,7 +34,7 @@ public class ArrayDemo {
       {3},
       {1, 24},
     };
-    System.out.println(htmlTable(ary)); // expected output: "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr><tr><td>1</td><td>24</td></tr></table>"
+    System.out.println(htmlTable(ary3)); // expected output: "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr><tr><td>1</td><td>24</td></tr></table>"
   }
 
 
