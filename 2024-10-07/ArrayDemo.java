@@ -24,11 +24,11 @@ public class ArrayDemo {
     };
     System.out.println("Zeroes in array: " + (countZeros2D(array4)));; // expected : 0
 
-    int[][] array3 = {
+    int[][] array5 = {
       {0},
       {0, 0, 0}
     };
-    System.out.println("Zeroes in array: " + (countZeros2D(array3)));; // expected : 4
+    System.out.println("Zeroes in array: " + (countZeros2D(array5)));; // expected : 4
 
     // test cases for html; passed
     int[][] ary = {
