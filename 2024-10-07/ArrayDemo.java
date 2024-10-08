@@ -124,7 +124,7 @@ public class ArrayDemo {
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
 
   public static String htmlTable(int[][]nums){
-    String result = "" + "<table>";
+    String result = "<table>";
     for (int i = 0; i < nums.length; i++) {
       result += "<tr>";
       for (int j = 0; j < nums[i].length; j++) {
