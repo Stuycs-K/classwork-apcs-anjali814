@@ -29,6 +29,16 @@ public class ArrayDemo {
       {3}
     };
     System.out.println(htmlTable(ary)); // expected output: "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
+
+    int[][] ary2 = {};
+    System.out.println(htmlTable(ary2)); // expected output:
+
+    int[][] ary3 = {
+      {1, 2},
+      {3},
+      {1, 24},
+    };
+    System.out.println(htmlTable(ary)); // expected output: "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr><tr><td>1</td><td>24</td></tr></table>"
   }
 
 
