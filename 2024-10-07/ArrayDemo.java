@@ -18,6 +18,18 @@ public class ArrayDemo {
     };
     System.out.println("Zeroes in array: " + (countZeros2D(array3)));; // expected : 4
 
+    int[][] array4 = {
+      {1, -3},
+      {5}
+    };
+    System.out.println("Zeroes in array: " + (countZeros2D(array4)));; // expected : 0
+
+    int[][] array3 = {
+      {0},
+      {0, 0, 0}
+    };
+    System.out.println("Zeroes in array: " + (countZeros2D(array3)));; // expected : 4
+
     // test cases for html; passed
     int[][] ary = {
       {1, 2},
