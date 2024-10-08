@@ -6,6 +6,8 @@ public class ArrayDemo {
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
+
+    // test cases for count zeroes; passed
     int[][] array = {
       {1, 0, 3},
       {4, 5, 0}
@@ -20,8 +22,15 @@ public class ArrayDemo {
       {0, 5, 0, 0}
     };
     System.out.println("Zeroes in array: " + (countZeros2D(array3)));; // expected : 4
-}
 
+    // test cases for html;
+    int[][] ary = {
+            {1, 2},
+            {3}
+        };
+        System.out.println(htmlTable(ary)); // expected output: "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
+    }
+}
 
 
 
@@ -114,11 +123,16 @@ public class ArrayDemo {
   //   Note there is no whitespace in the string, it all one line with no spaces/tabs.
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
-  /*
+
   public static String htmlTable(int[][]nums){
-    for (int 1 = 0; i < nums.length; i++)
-    return "";
+    String result = "<table>"";
+    for (int i = 0; i < nums.length; i++) {
+      result += ""<tr>"";
+      for (int j = 0; j < nums[i].length; j++) {
+        result += "<td>"" + nums[i][j] + "</td>"";;
+      }
+    }
+    return result;
   }
-  */
 
 }
