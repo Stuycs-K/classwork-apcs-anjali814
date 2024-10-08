@@ -6,6 +6,11 @@ public class ArrayDemo {
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
+    int[][] array = {
+      {1, 0, 3},
+      {4, 5, 0}
+    };
+    System.out.println("Zeroes in array: " + Arrays.toString(countZeros2D(array)));; // expected : 2
   }
 
   public static String arrToString(int ary[]){
