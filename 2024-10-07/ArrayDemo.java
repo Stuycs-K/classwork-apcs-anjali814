@@ -13,7 +13,7 @@ public class ArrayDemo {
     System.out.println("Zeroes in array: " + (countZeros2D(array2)));; // expected : 0
 
     int[][] array3 = {
-      {1, 0, 3},
+      {1, 0, -3},
       {0, 5, 0, 0}
     };
     System.out.println("Zeroes in array: " + (countZeros2D(array3)));; // expected : 4
@@ -31,9 +31,9 @@ public class ArrayDemo {
     int[][] ary3 = {
       {1, 2},
       {3},
-      {1, 24},
+      {-1, 24},
     };
-    System.out.println(htmlTable(ary3)); // expected output: "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr><tr><td>1</td><td>24</td></tr></table>"
+    System.out.println(htmlTable(ary3)); // expected output: "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr><tr><td>-1</td><td>24</td></tr></table>"
   }
 
 
