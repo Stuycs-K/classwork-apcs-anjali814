@@ -11,7 +11,19 @@ public class ArrayDemo {
       {4, 5, 0}
     };
     System.out.println("Zeroes in array: " + (countZeros2D(array)));; // expected : 2
-  }
+
+    int[][] array2 = {};
+    System.out.println("Zeroes in array: " + (countZeros2D(array2)));; // expected : 0
+
+    int[][] array3 = {
+      {1, 0, 3},
+      {0, 5, 0, 0}
+    };
+    System.out.println("Zeroes in array: " + (countZeros2D(array3)));; // expected : 0
+}
+
+
+
 
   public static String arrToString(int ary[]){
     String combined = "[";
