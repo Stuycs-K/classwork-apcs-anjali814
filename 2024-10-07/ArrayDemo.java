@@ -10,7 +10,7 @@ public class ArrayDemo {
       {1, 0, 3},
       {4, 5, 0}
     };
-    System.out.println("Zeroes in array: " + (countZeros2D(array));; // expected : 2
+    System.out.println("Zeroes in array: " + (countZeros2D(array)));; // expected : 2
   }
 
   public static String arrToString(int ary[]){
