@@ -13,6 +13,7 @@ public class Demo{
     Point p2 = new Point(-1,-1);
     Point p3 = new Point(3,4);
 
+    // test cases for point
     System.out.println ("Point 1: " + p1); // Expected: (1.0, 1.0)
     System.out.println ("Point 2: " + p2); // Expected: (-1.0, -1.0)
     System.out.println ("Point 3: " + p3); // Expected: (3.0, 4.0)
@@ -31,5 +32,15 @@ public class Demo{
     System.out.println("Distance from p1 to p2 using Point.distance: " + Point.distance(p1,p2));
     System.out.println("Distance from p1 to p2 using distanceTo: " + p1.distanceTo(p2));
 
+
+    // Equilateral triangle
+    double sideLength = 3.0;
+    Point ep1 = new Point(1, 0);
+    Point ep2 = new Point(4, 0);
+    Point ep3 = new Point(ep1.getX() + (sideLength / 2), (Math.sqrt(3) / 2) * sideLength);
+
+    System.out.println("Point A: " + ep1); // Vertex 1
+    System.out.println("Point B: " + ep2); // Vertex 2
+    System.out.println("Point C: " + ep3); // Vertex 3
   }
 }
