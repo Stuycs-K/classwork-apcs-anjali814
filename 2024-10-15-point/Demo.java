@@ -46,6 +46,6 @@ public class Demo{
     // Print side lengths
     System.out.println("Length AB:" , ep1.distanceTo(ep2));
     System.out.println("Length BC:" , ep2.distance(ep3));
-    System.out.println("Length CA:" , ep3.distance(ep1));
+    System.out.println("Length CA:" , ep3.distance(ep1)); 
   }
 }
