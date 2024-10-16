@@ -48,8 +48,8 @@ public class Demo{
     double bc = ep2.distanceTo(ep3);
     double ca = ep3.distanceTo(ep1);
 
-    System.out.println("Length AB:" , ab);
-    System.out.println("Length BC:" , bc);
-    System.out.println("Length CA:" , ca); 
+    System.out.println("Length AB:" + ab);
+    System.out.println("Length BC:" + bc);
+    System.out.println("Length CA:" + ca);
   }
 }
