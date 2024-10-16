@@ -44,8 +44,8 @@ public class Demo{
     System.out.println("Point C: " + ep3); // Vertex 3
 
     // Print side lengths
-    System.out.println("Length AB:" , distance(ep1, ep2));
-    System.out.println("Length BC:" , distance(ep2, ep3));
-    System.out.println("Length CA:" , distance(ep3, ep1));
+    System.out.println("Length AB:" , ep1.distanceTo(ep2));
+    System.out.println("Length BC:" , ep2.distance(ep3));
+    System.out.println("Length CA:" , ep3.distance(ep1));
   }
 }
