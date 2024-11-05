@@ -1,7 +1,7 @@
 public class TriangleTester {
 
   public static int countTrianglesA(String filename) {
-    int count = 0
+    int count = 0;
     try {
       File file = new File(filename);
       while(file.hasNextLine()){
@@ -20,21 +20,29 @@ public class TriangleTester {
 
     return count;
   }
-  
-/*
+
   public static boolean isTriangle(int[] sides) {
     boolean isTri = true;
-    for (int i = 0; i < size.length && isTri; i++) {
-      if (size[0] + size[1] >= size[2]) {
+    for (int i = 0; i < sides.length && isTri; i++) {
+      if (sides[0] + sides[1] <= sides[2]) {
         isTri = false;
       }
+      sides = new int[]{sides[1], sides[2], sides[0]};
     }
     return isTri;
   }
-  */
 
   public static void main(String[] args){
-    System.out.println()
+    int[] teststuff = new int[]{5, 10, 25};
+    System.out.println(teststuff + " (should be FALSE): " + isTriangle(teststuff));
+    teststuff = new int[]{5, 100, 5};
+    System.out.println(teststuff + " (should be FALSE): " + isTriangle(teststuff));
+    teststuff = new int[]{5, 5, 2};
+    System.out.println(teststuff + " (should be TRUE): " + isTriangle(teststuff));
+    teststuff = new int[]{1, 2, 3};
+    System.out.println(teststuff + " (should be FALSE): " + isTriangle(teststuff));
+    teststuff = new int[]{3, 2, 3};
+    System.out.println(teststuff + " (should be TRUE): " + isTriangle(teststuff));
       }
 
 }
