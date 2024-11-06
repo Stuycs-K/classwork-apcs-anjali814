@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class TriangleTester {
 // Part A
@@ -76,7 +77,7 @@ public class TriangleTester {
        input.close();
      } catch (FileNotFoundException e) {
        System.out.println("File not found: " + filename);
-       return 0;
+       return -1;
      }
      return count;
    }
@@ -93,15 +94,15 @@ public class TriangleTester {
 
   public static void main(String[] args){
     int[] teststuff = new int[]{5, 10, 25};
-    System.out.println(teststuff + " (should be FALSE): " + isTriangle(teststuff));
+    System.out.println(Arrays.toString(teststuff) + " (should be FALSE): " + isTriangle(teststuff));
     teststuff = new int[]{5, 100, 5};
-    System.out.println(teststuff + " (should be FALSE): " + isTriangle(teststuff));
+    System.out.println(Arrays.toString(teststuff) + " (should be FALSE): " + isTriangle(teststuff));
     teststuff = new int[]{5, 5, 2};
-    System.out.println(teststuff + " (should be TRUE): " + isTriangle(teststuff));
+    System.out.println(Arrays.toString(teststuff) + " (should be TRUE): " + isTriangle(teststuff));
     teststuff = new int[]{1, 2, 3};
-    System.out.println(teststuff + " (should be FALSE): " + isTriangle(teststuff));
+    System.out.println(Arrays.toString(teststuff) + " (should be FALSE): " + isTriangle(teststuff));
     teststuff = new int[]{3, 2, 3};
-    System.out.println(teststuff + " (should be TRUE): " + isTriangle(teststuff));
+    System.out.println(Arrays.toString(teststuff) + " (should be TRUE): " + isTriangle(teststuff));
 
     String filename = "inputTri.txt";
     int validTrianglesA = countTrianglesA(filename);
