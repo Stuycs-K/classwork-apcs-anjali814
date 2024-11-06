@@ -64,13 +64,14 @@ public class TriangleTester {
            column2 = appendToColumn(column2, b);
            column3 = appendToColumn(column3, c);
          }
+       }
 
-         for (int i = 0; i < column1.length; i++) {
-           int[] sides = new int[]{column1[i], column2[i], column3[i]};
-           if (isTriangle(sides)) {
-             count++;
-           }
+       for (int i = 0; i < column1.length; i++) {
+         int[] sides = new int[]{column1[i], column2[i], column3[i]};
+         if (isTriangle(sides)) {
+           count++;
          }
+       }
 
        input.close();
      } catch (FileNotFoundException e) {
@@ -78,6 +79,15 @@ public class TriangleTester {
        return 0;
      }
      return count;
+   }
+
+   public static int[] appendToColumn(int[] column, int value) {
+     int[] newColumn = new int[column.length + 1];
+     for (int i = 0; i < column.length; i++) {
+       newColumn[i] = column[i];
+     }
+     newColumn[column.length] = value;
+     return newColumn;
    }
 
 
