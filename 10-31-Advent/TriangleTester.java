@@ -2,21 +2,27 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class TriangleTester {
+
 // Part A
   public static int countTrianglesA(String filename) {
     int count = 0;
+
     try {
       File file = new File(filename);
       Scanner input = new Scanner(file);
+
       while(input.hasNextLine()){
         String line = input.nextLine();
-        String[] parts = line.split(" ");
+        String[] parts = line.split("\\s+");
+
         if (parts.length == 3) {
           int a = Integer.parseInt(parts[0]);
           int b = Integer.parseInt(parts[1]);
           int c = Integer.parseInt(parts[2]);
+
           if (isTriangle(new int[]{a, b, c})) {
             count++;
           }
@@ -31,15 +37,11 @@ public class TriangleTester {
   }
 
   public static boolean isTriangle(int[] sides) {
-    boolean isTri = true;
-    for (int i = 0; i < sides.length && isTri; i++) {
-      if (sides[0] + sides[1] <= sides[2]) {
-        return false;
-      }
-      sides = new int[]{sides[1], sides[2], sides[0]};
-    }
-    return true;
+    return sides[0] + sides[1] > sides[2] &&
+    sides[0] + sides[2] > sides[1] &&
+    sides[1] + sides[2] > sides[0];
   }
+
 
 // Part B
    public static int countTrianglesB(String filename) {
@@ -54,7 +56,7 @@ public class TriangleTester {
 
        while(input.hasNextLine()){
          String line = input.nextLine();
-         String[] parts = line.split(" ");
+         String[] parts = line.split("\\s+");
 
          if (parts.length == 3) {
            int a = Integer.parseInt(parts[0]);
@@ -77,7 +79,7 @@ public class TriangleTester {
        input.close();
      } catch (FileNotFoundException e) {
        System.out.println("File not found: " + filename);
-       return -1;
+       return 0;
      }
      return count;
    }
@@ -90,6 +92,7 @@ public class TriangleTester {
      newColumn[column.length] = value;
      return newColumn;
    }
+
 
 
   public static void main(String[] args){
@@ -110,6 +113,6 @@ public class TriangleTester {
 
     int validTrianglesB = countTrianglesB(filename);
     System.out.println("Valid triangles in Part B: " + validTrianglesB);
-      }
+  }
 
 }
