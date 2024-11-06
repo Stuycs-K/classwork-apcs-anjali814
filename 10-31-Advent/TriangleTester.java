@@ -104,8 +104,11 @@ public class TriangleTester {
     System.out.println(teststuff + " (should be TRUE): " + isTriangle(teststuff));
 
     String filename = "inputTri.txt";
-    int validTriangles = countTrianglesA(filename);
-    System.out.println("Valid triangles in Part A: " + validTriangles);
+    int validTrianglesA = countTrianglesA(filename);
+    System.out.println("Valid triangles in Part A: " + validTrianglesA);
+
+    int validTrianglesB = countTrianglesB(filename);
+    System.out.println("Valid triangles in Part B: " + validTrianglesB);
       }
 
 }
