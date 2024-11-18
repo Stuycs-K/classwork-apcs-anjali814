@@ -31,7 +31,7 @@ public class ArrayListPractice{
     return list;
   }
 
-  public static ArrayList<String> mixLists( ArrayList<String> a,  ArrayList<String> b){
+  public static ArrayList<String> mixLists(ArrayList<String> a,  ArrayList<String> b){
     ArrayList<String> list = new ArrayList<> ();
     int size = Math.max(a.size(), b.size());
     for (int i = 0; i < size; i++) {
@@ -47,5 +47,26 @@ public class ArrayListPractice{
 
   public static void main(String[] args) {
     System.out.println(createRandomArray(10));
+
+
+    ArrayList<String> listEmptyString = createRandomArray(10);
+    System.out.println("before replaceEmpty: " + listEmptyString);
+    replaceEmpty(listEmptyString);
+    System.out.println("after replaceEmpty: " + listEmptyString);
+
+
+    ArrayList<String> reverseString = createRandomArray(10);
+    System.out.println("before makeReversedList: " + reverseString);
+    makeReversedList(reverseString);
+    System.out.println("after makeReversedList: " + reverseString);
+
+
+    ArrayList<String> mixStringA = createRandomArray(10);
+    System.out.println("original mixStringA: " + mixStringA);
+    ArrayList<String> mixStringB = createRandomArray(10);
+    System.out.println("original mixStringB: " + mixStringB);
+
+    System.out.println("mixing lists a and b: " + mixLists(mixStringA, mixStringB));
+
   }
 }
