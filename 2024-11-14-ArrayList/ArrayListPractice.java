@@ -5,7 +5,7 @@ public class ArrayListPractice{
     ArrayList<String> list = new ArrayList<> ();
 
     for (int i = 0; i < size; i++){
-    int num = (Math.random() * 11);
+    int num = (int) (Math.random() * 11);
     if (num == 0){
       list.add("");
     } else {
@@ -57,8 +57,7 @@ public class ArrayListPractice{
 
     ArrayList<String> reverseString = createRandomArray(10);
     System.out.println("before makeReversedList: " + reverseString);
-    makeReversedList(reverseString);
-    System.out.println("after makeReversedList: " + reverseString);
+    System.out.println("after makeReversedList: " + makeReversedList(reverseString));
 
 
     ArrayList<String> mixStringA = createRandomArray(10);
