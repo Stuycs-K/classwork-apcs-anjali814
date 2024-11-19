@@ -1,8 +1,14 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class santasleigh{
   public static int easterBunnyHQ(String filename){
-    int [] xcoordinate = {-1, 0, 1, 0}
-    int [] ycoordinate = {0, 1, 0, -1}
+    int [] xcoordinate = {-1, 0, 1, 0};
+    int [] ycoordinate = {0, 1, 0, -1};
 
+    int x = 0;
+    int y = 0;
     int currentDirection = 0;
 
     try {
@@ -11,9 +17,9 @@ public class santasleigh{
 
       String direction = input.nextLine();
 
-      for (i = 0; i < direction.length; i++){
-        char turn = instructions.charAt(i);
-        int steps = Integer.parseInt(instructions.substring(i+1));
+      for (int i = 0; i < direction.length(); i++){
+        char turn = direction.charAt(i);
+        int steps = Integer.parseInt(direction.substring(i+1));
         if (turn == 'L') {
           currentDirection = (currentDirection + 3) % 4;
         } else if (turn == 'R') {
@@ -26,6 +32,13 @@ public class santasleigh{
     } catch (FileNotFoundException e) {
       System.out.println("File not found: " + filename);
       return 0;
-    }  
+    }
+    return Math.abs(x) + Math.abs(y);
   }
+
+  public static void main(String[] args) {
+    String filename = "inputSleigh.txt";
+    int bunnyHQ = easterBunnyHQ(filename);
+    System.out.println(bunnyHQ);
+    }
 }
