@@ -57,20 +57,24 @@ public class TriangleTester {
          lineIndex++;
 
          if (lineIndex == 3) {
-           String[] parts1 = lines[0].split("\\s+");
-           String[] parts2 = lines[1].split("\\s+");
-           String[] parts3 = lines[2].split("\\s+");
+           for (int i = 0; i < 3; i++) {
+             String[] parts1 = lines[0].split("\\s+");
+             String[] parts2 = lines[1].split("\\s+");
+             String[] parts3 = lines[2].split("\\s+");
 
-           if (parts1.length == 3 && parts2.length == 3 && parts3.length == 3) {
-             if (isTriangle(Integer.parseInt(parts1[0]), Integer.parseInt(parts2[0]), Integer.parseInt(parts3[0]))) count++;
-             if (isTriangle(Integer.parseInt(parts1[1]), Integer.parseInt(parts2[1]), Integer.parseInt(parts3[1]))) count++;
-             if (isTriangle(Integer.parseInt(parts1[2]), Integer.parseInt(parts2[2]), Integer.parseInt(parts3[2]))) count++;
-            }
-            lineIndex = 0;
-          }
-        }
-
-        input.close();
+             if (parts1.length == 3 && parts2.length == 3 && parts3.length == 3) {
+               int a = Integer.parseInt(parts1[i]);
+               int b = Integer.parseInt(parts2[i]);
+               int c = Integer.parseInt(parts3[i]);
+               if (isTriangle(a, b, c)) {
+                 count++;
+               }
+             }
+           }
+           lineIndex = 0;
+         }
+       }
+       input.close();
      } catch (FileNotFoundException e) {
        System.out.println("File not found: " + filename);
        return 0;
