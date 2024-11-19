@@ -1,8 +1,5 @@
 public class bathroomsecurity{
   public static String bathroomCode(String filename){
-    int [] xdirection = {0, 1, 0, -1}; //left right up down
-    int [] ydirection = {1, 0, -1, 0};
-
     int x = 1;
     int y = 1;
 
@@ -14,11 +11,14 @@ public class bathroomsecurity{
 
       while (input.hasNextLine()){
       String direction = input.nextLine();
-      for (int i = 0; i < instructions.length(); i++) {
-        char move = instructions.charAt(i);
+      for (int i = 0; i < direction.length(); i++) {
+        char move = direction.charAt(i);
         int newX = x;
         int newY = y;
 
+        if (move == 'U') {
+          newX = x - 1;
+        } else if (move == 'D') {
 
 
 
@@ -29,6 +29,13 @@ public class bathroomsecurity{
           x = newX;
           y = newY;
         }
+      }
+      code += (3 * x + y + 1);
     }
+  } catch
+}
+return code;
+}
+
   }
 }
