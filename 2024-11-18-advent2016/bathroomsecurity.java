@@ -46,7 +46,7 @@ public class bathroomsecurity{
   }
 
   public static void main(String[] args) {
-    String filename = "inputCode.txt";
+    String filename = "inputSecurity.txt";
     System.out.println(bathroomCode(filename));
   }
 
