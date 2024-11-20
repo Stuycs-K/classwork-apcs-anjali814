@@ -11,6 +11,9 @@ public class santasleigh{
     int y = 0;
     int currentDirection = 0;
 
+    List<String> visitedlocations = new ArrayList<>();
+    visitedlocations.add("0,0");
+
     try {
       File file = new File(filename);
       Scanner input = new Scanner(file);
