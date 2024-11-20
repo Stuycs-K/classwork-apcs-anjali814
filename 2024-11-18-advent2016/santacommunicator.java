@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class santacommunicator{
   public static String communications (String filename){
@@ -25,20 +26,30 @@ public class santacommunicator{
         for (int j = 0; j < lines.size(); j++) {
           char c = lines.get(j).charAt(i);
           freq[c - 'a']++;
-
+        }
 
         int maxFreq = 0;
         char mostFrequentChar = 'a';
-        for (int k = 0; k < 25; k++) {
+        for (int k = 0; k < 26; k++) {
           if (freq[k] > maxFreq) {
             maxFreq = freq[k];
             mostFrequentChar = (char) (k + 'a');
           }
         }
-      }
-        message += mostFrequentChar;
 
+        password += mostFrequentChar;
+      }
+    } catch (FileNotFoundException e){
+      System.out.println("File not found: " + filename);
+      return "";
     }
     return password;
   }
+
+  public static void main (String[] args){
+    String filename = "inputCommunicator.txt";
+    System.out.println(communications(filename));
+  }
+
+
 }
