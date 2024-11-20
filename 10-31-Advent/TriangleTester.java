@@ -15,17 +15,32 @@ public class TriangleTester {
       Scanner input = new Scanner(file);
 
       while(input.hasNextLine()){
-        String line = input.nextLine();
+        String line = input.nextLine().trim();
+
+        if (line.isEmpty()) {
+          continue;
+        }
+
         String[] parts = line.split("\\s+");
 
-        if (parts.length == 3) {
+        if (parts.length != 3) {
+          continue;
+        }
+
+        try {
           int a = Integer.parseInt(parts[0]);
           int b = Integer.parseInt(parts[1]);
           int c = Integer.parseInt(parts[2]);
 
-          if (isTriangle(a, b, c)) {
+          if (a > b) { int temp = a; a = b; b = temp; }
+          if (b > c) { int temp = b; b = c; c = temp; }
+          if (a > b) { int temp = a; a = b; b = temp; }
+
+          if (a + b > c) {
             count++;
           }
+        } catch (NumberFormatException e) {
+          System.out.println("Skipping invalid line: " + line);
         }
       }
       input.close();
@@ -36,12 +51,8 @@ public class TriangleTester {
     return count;
   }
 
-  public static boolean isTriangle(int a, int b, int c) {
-    return (a + b > c) && (a + c > b) && (b + c > a);
-  }
 
-
-// Part B
+/* Part B
    public static int countTrianglesB(String filename) {
      int count = 0;
 
@@ -81,15 +92,15 @@ public class TriangleTester {
      }
      return count;
    }
-
-
+*/
 
   public static void main(String[] args){
     String filename = "inputTri.txt";
     int validTrianglesA = countTrianglesA(filename);
     System.out.println("Valid triangles in Part A: " + validTrianglesA);
 
-    int validTrianglesB = countTrianglesB(filename);
+/*    int validTrianglesB = countTrianglesB(filename);
     System.out.println("Valid triangles in Part B: " + validTrianglesB);
+    */
   }
 }
