@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class santasleigh{
   public static int easterBunnyHQ(String filename){
@@ -11,7 +12,7 @@ public class santasleigh{
     int y = 0;
     int currentDirection = 0;
 
-    List<String> visitedlocations = new ArrayList<>();
+    ArrayList<String> visitedlocations = new ArrayList<>();
     visitedlocations.add("0,0");
 
     try {
@@ -31,9 +32,18 @@ public class santasleigh{
         } else if (turn == 'R') {
           currentDirection = (currentDirection + 1) % 4;
         }
+
+        for (int j = 0; j < steps; j++){
           x += xcoordinate[currentDirection] * steps;
           y += ycoordinate[currentDirection] * steps;
+
+          String currentLocation = x + "," + y;
+          if (visitedlocations.contains(currentLocation)){
+            input.close();
+            return Math.abs(x) + Math.abs(y);
+          }
         }
+      }
       input.close();
     } catch (FileNotFoundException e) {
       System.out.println("File not found: " + filename);
