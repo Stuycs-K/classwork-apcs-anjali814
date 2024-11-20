@@ -52,7 +52,7 @@ public class TriangleTester {
   }
 
 
-/* Part B
+// Part B
    public static int countTrianglesB(String filename) {
      int count = 0;
 
@@ -64,7 +64,7 @@ public class TriangleTester {
        int lineIndex = 0;
 
        while(input.hasNextLine()){
-         lines[lineIndex] = input.nextLine();
+         lines[lineIndex] = input.nextLine().trim();
          lineIndex++;
 
          if (lineIndex == 3) {
@@ -77,6 +77,7 @@ public class TriangleTester {
                int a = Integer.parseInt(parts1[i]);
                int b = Integer.parseInt(parts2[i]);
                int c = Integer.parseInt(parts3[i]);
+
                if (isTriangle(a, b, c)) {
                  count++;
                }
@@ -92,15 +93,18 @@ public class TriangleTester {
      }
      return count;
    }
-*/
+
+   public static boolean isTriangle(int a, int b, int c) {
+     return (a + b > c) && (a + c > b) && (b + c > a);
+   }
 
   public static void main(String[] args){
     String filename = "inputTri.txt";
     int validTrianglesA = countTrianglesA(filename);
     System.out.println("Valid triangles in Part A: " + validTrianglesA);
 
-/*    int validTrianglesB = countTrianglesB(filename);
+    int validTrianglesB = countTrianglesB(filename);
     System.out.println("Valid triangles in Part B: " + validTrianglesB);
-    */
+
   }
 }
