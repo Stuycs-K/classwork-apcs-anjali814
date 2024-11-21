@@ -34,13 +34,15 @@ public class santasleigh{
         }
 
         for (int j = 0; j < steps; j++){
-          x += xcoordinate[currentDirection] * steps;
-          y += ycoordinate[currentDirection] * steps;
+          x += xcoordinate[currentDirection];
+          y += ycoordinate[currentDirection];
 
           String currentLocation = x + "," + y;
           if (visitedlocations.contains(currentLocation)){
             input.close();
             return Math.abs(x) + Math.abs(y);
+          } else {
+            visitedlocations.add(currentLocation);
           }
         }
       }
@@ -49,7 +51,7 @@ public class santasleigh{
       System.out.println("File not found: " + filename);
       return 0;
     }
-    return Math.abs(x) + Math.abs(y);
+    return 0;
   }
 
   public static void main(String[] args) {
