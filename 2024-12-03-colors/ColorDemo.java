@@ -18,12 +18,24 @@ public class ColorDemo{
   };
 
   public static void main (String[] args){
-    int duration = 1000;
+    int duration =  1000;
     int colorIndex = 0;
-    int iterations = 60;
-    
-    for (int i = 0; i < iterations; i++) {
-    System.out.println(RED + "this text is red" + RESET);
-  }
+    int iterations = 8;
 
+    for (int i = 0; i < iterations; i++) {
+      System.out.print(CLEAR_SCREEN);
+
+      System.out.print(COLORS[colorIndex] + "This text is color " + (colorIndex + 1) + RESET);
+      colorIndex = (colorIndex + 1) % COLORS.length;
+
+      try {
+        Thread.sleep(duration);
+      } catch (InterruptedException e) {
+        System.err.println("Sleep was interrupted: " + e.getMessage());
+      }
+    }
+
+    System.out.print(SHOW_CURSOR);
+    System.out.print(RESET);
+  }
 }
