@@ -31,7 +31,7 @@ public class Driver{
       }
       return numbers;
   }
-  
+
   public static void ColorNumbers(int numbers){
     if (numbers < 25) {
       Text.color(Text.BRIGHT, Text.RED);
@@ -44,9 +44,9 @@ public class Driver{
   }
 
   public static void DisplayNumbers(int[] numbers){
-    int first = 1;
-    int second = 79 / 3 + 1;
-    int third = ((2 * 79) / 3 + 1);
+    int first = 80 / 2 - 20;;
+    int second = first + 20;
+    int third = second + 20;
     Text.go(2, first);
     ColorNumbers(numbers[0]);
 
@@ -55,6 +55,15 @@ public class Driver{
 
     Text.go(2, third);
     ColorNumbers(numbers[2]);
+  }
+
+  public static void Separator() {
+    Text.color(Text.RED, Text.CYAN);
+    Text.go(3, 1);
+    for (int col = 1; col <= 80; col++) {
+      System.out.print("-");
+    }
+    System.out.println();
   }
 
 
@@ -67,6 +76,7 @@ public class Driver{
     drawBorder();
     int[] numbers = RandomNumbers();
     DisplayNumbers(numbers);
+    Separator();
     drawBorder();
 
     System.out.print(Text.RESET);
