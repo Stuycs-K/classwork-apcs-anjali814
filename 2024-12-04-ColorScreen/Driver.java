@@ -58,10 +58,10 @@ public class Driver{
   }
 
   public static void Separator() {
-    Text.color(Text.RED, Text.CYAN);
+    Text.color(Text.RED, Text.YELLOW);
     Text.go(3, 1);
     for (int col = 1; col <= 80; col++) {
-      System.out.print("-");
+      System.out.print("=");
     }
     System.out.println();
   }
@@ -73,11 +73,13 @@ public class Driver{
     System.out.print(Text.CLEAR_SCREEN);
     System.out.print(Text.HIDE_CURSOR);
 
-    drawBorder();
     int[] numbers = RandomNumbers();
     DisplayNumbers(numbers);
     Separator();
     drawBorder();
+
+    Text.go(31, 1);
+    System.out.println();
 
     System.out.print(Text.RESET);
     System.out.print(Text.SHOW_CURSOR);
