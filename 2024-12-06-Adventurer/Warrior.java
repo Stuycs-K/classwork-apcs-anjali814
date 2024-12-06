@@ -31,12 +31,16 @@ public class Warrior extends Adventurer{
   public String support(Adventurer other);{
     int heal = 5;
     other.applyDamage(-heal);
-    return this.getName() + " heals " + other.getName() + "by" + heals;
+    return this.getName() + " heals " + other.getName() + "by" + heal;
   }
 
   public String support(){
     int heal = 5;
     this.applyDamage(-heal);
     return this.getName() + "heals by " + heal;
+  }
+
+  public String specialAttack(Adventurer other){
+
   }
 }
