@@ -17,13 +17,26 @@ public class Warrior extends Adventurer{
   public void setSpecial(int n){
     this.rage = n;
   }
-/*
-  public abstract int getSpecialMax(){
 
+  public int getSpecialMax(){
+    return 100;
   }
-  public abstract String attack(Adventurer other){
+
+  public String attack(Adventurer other){
     int damage = 5;
-    other.
+    other.applyDamage(damage);
+    return this.getName() + " attacks " + other.getName() + "with a damage of " + damage;
   }
-  */
+
+  public String support(Adventurer other);{
+    int heal = 5;
+    other.applyDamage(-heal);
+    return this.getName() + " heals " + other.getName() + "by" + heals;
+  }
+
+  public String support(){
+    int heal = 5;
+    this.applyDamage(-heal);
+    return this.getName() + "heals by " + heal;
+  }
 }
