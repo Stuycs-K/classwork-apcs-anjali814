@@ -11,6 +11,7 @@ public class Warrior extends Adventurer{
     this.rage = 0;
   }
 
+
   public String getSpecialName(){
     return "rage";
   }
@@ -31,10 +32,11 @@ public class Warrior extends Adventurer{
     return 100;
   }
 
+
   public String attack(Adventurer other){
     int damage = 5;
     other.applyDamage(damage);
-    return this.getName() + " attacks " + other.getName() + "with a damage of " + damage;
+    return this.getName() + " attacks " + other.getName() + " with a damage of " + damage;
   }
 
   public String support(Adventurer other){
@@ -46,7 +48,7 @@ public class Warrior extends Adventurer{
   public String support(){
     int heal = 10;
     this.setHP(this.getHP() + heal);
-    return this.getName() + "heals by " + heal;
+    return this.getName() + " heals by " + heal;
   }
 
   public String specialAttack(Adventurer other){
