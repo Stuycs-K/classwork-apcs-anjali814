@@ -1,6 +1,11 @@
 public class Warrior extends Adventurer{
   private int rage;
 
+  public Warrior (String name){
+    super(name);
+    this.rage = 0;
+  }
+
   public Warrior (String name, int hp){
     super(name, hp);
     this.rage = 0;
@@ -15,7 +20,11 @@ public class Warrior extends Adventurer{
   }
 
   public void setSpecial(int n){
-    this.rage = n;
+    if (n < 0) {
+      this.rage = 0;
+    } else {
+      this.rage = n;
+    }
   }
 
   public int getSpecialMax(){
@@ -35,8 +44,8 @@ public class Warrior extends Adventurer{
   }
 
   public String support(){
-    int heal = 5;
-    this.applyDamage(-heal);
+    int heal = 10;
+    this.setHP(this.getHP() + heal);
     return this.getName() + "heals by " + heal;
   }
 
