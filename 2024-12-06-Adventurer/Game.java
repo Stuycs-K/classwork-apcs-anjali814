@@ -15,12 +15,12 @@ public class Game{
       System.out.println("Enter: (a)ttack / (sp)ecial / (su)pport / quit");
       String user = userinput.nextLine().toLowerCase();
 
-      while (!(userAction.equals("a") || userAction.equals("attack") ||
-        userAction.equals("sp") || userAction.equals("special") ||
-        userAction.equals("su") || userAction.equals("support") ||
-        userAction.equals("quit"))){
+      while (!(user.equals("a") || user.equals("attack")
+        || user.equals("sp") || user.equals("special")
+        || user.equals("su") || user.equals("support")
+        || user.equals("quit"))){
           System.out.println("invalid. Type: (a)ttack / (sp)ecial / (su)pport / quit");
-          userAction = userInput.nextLine().toLowerCase();
+          user = userinput.nextLine().toLowerCase();
         }
 
         if (user.equals("a") || user.equals("attack")) {
@@ -33,6 +33,16 @@ public class Game{
           System.out.println("exiting game");
           return;
         }
+
+        if (player.getHP() <= 0) {
+          System.out.println(player.getName() + " has been defeated. game over!");
+          return;
+        } else if (enemy.getHP() <= 0) {
+          System.out.println(enemy.getName() + " has been defeated. you win!");
+          return;
+        }
+
+        user.close();
+      }
     }
   }
-}
