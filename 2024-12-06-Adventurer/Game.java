@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Game{
   public static void main(String[] args){
@@ -42,7 +43,29 @@ public class Game{
           return;
         }
 
-        user.close();
+        enemyTurn(enemy, player);
+
+        if (player.getHP() <= 0) {
+          System.out.println(player.getName() + " has been defeated. game over!");
+          break;
+        } else if (enemy.getHP() <= 0) {
+          System.out.println(enemy.getName() + " has been defeated. you win!");
+          break;
+        }
+      }
+      userinput.close();
+    }
+
+    public static void enemyTurn(Adventurer enemy, Adventurer player) {
+      Random random = new Random();
+      int action = random.nextInt(3);
+
+      if (action == 0) {
+        System.out.println(enemy.attack(player));
+      } else if (action == 1) {
+        System.out.println(enemy.specialAttack(player));
+      } else if (action == 2) {
+        System.out.println(enemy.support(player));
       }
     }
   }
