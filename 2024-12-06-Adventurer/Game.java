@@ -15,16 +15,24 @@ public class Game{
       System.out.println("Enter: (a)ttack / (sp)ecial / (su)pport / quit");
       String user = userinput.nextLine().toLowerCase();
 
-      if (user.equals("a") || user.equals("attack")) {
-        System.out.println(player.attack(enemy));
-      } else if (user.equals("sp") || user.equals("special")) {
-        System.out.println(player.specialAttack(enemy));
-      } else if (user.equals("su") || user.equals("support")) {
-        System.out.println(player.support());
-      } else if (user.equals("quit")) {
-        System.out.println("exiting game");
-        break;
-      }
+      while (!(userAction.equals("a") || userAction.equals("attack") ||
+        userAction.equals("sp") || userAction.equals("special") ||
+        userAction.equals("su") || userAction.equals("support") ||
+        userAction.equals("quit"))){
+          System.out.println("invalid. Type: (a)ttack / (sp)ecial / (su)pport / quit");
+          userAction = userInput.nextLine().toLowerCase();
+        }
+
+        if (user.equals("a") || user.equals("attack")) {
+          System.out.println(player.attack(enemy));
+        } else if (user.equals("sp") || user.equals("special")) {
+          System.out.println(player.specialAttack(enemy));
+        } else if (user.equals("su") || user.equals("support")) {
+          System.out.println(player.support());
+        } else if (user.equals("quit")) {
+          System.out.println("exiting game");
+          return;
+        }
     }
   }
 }
