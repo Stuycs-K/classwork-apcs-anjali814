@@ -10,7 +10,8 @@ public class fibonacci{
   }
 
   public static void main (String [] args){
-    for (int i = 0; i < 10; i++);
-    System.out.println("fib: " + i + "run fib: " + fib(i));
+    for (int i = 0; i < 10; i++){
+      System.out.println("fib: " + i + "run fib: " + fib(i));
+    }
   }
 }
