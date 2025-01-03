@@ -8,4 +8,9 @@ public class words{
       }
     }
   }
+
+  public static void main (String [] args){
+    System.out.println(makeWords(2,"","abc"));
+    System.out.println(makeWords(3,"","xy"));
+  }
 }
